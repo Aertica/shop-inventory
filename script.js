@@ -80,6 +80,7 @@ const filterRarity = (list, filters) =>
 
 const addItem = (item, list) =>
 {
+    if(!item) return
     let listItem = document.createElement('div')
     listItem.className = 'item'
     listItem.innerHTML = item.name
@@ -257,11 +258,11 @@ class PotionShop extends Shop
 
 class OditiesShop extends Shop
 {
-    static commonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Common']).sort((a, b) => {return Math.random() > 0.5})
-    static uncommonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Uncommon']).sort((a, b) => {return Math.random() > 0.5})
-    static rareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Rare']).sort((a, b) => {return Math.random() > 0.5})
-    static veryrareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Very Rare']).sort((a, b) => {return Math.random() > 0.5})
-    static legendaryShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Legendary']).sort((a, b) => {return Math.random() > 0.5})
+    static commonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Common']).sort((a, b) => {return Math.random() > 0.5})
+    static uncommonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Uncommon']).sort((a, b) => {return Math.random() > 0.5})
+    static rareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Rare']).sort((a, b) => {return Math.random() > 0.5})
+    static veryrareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Very Rare']).sort((a, b) => {return Math.random() > 0.5})
+    static legendaryShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Legendary']).sort((a, b) => {return Math.random() > 0.5})
 
     constructor(wealth)
     {
@@ -277,10 +278,10 @@ class OditiesShop extends Shop
 
     static reset = () =>
     {
-        this.commonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Common']).sort((a, b) => {return Math.random() > 0.5})
-        this.uncommonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Uncommon']).sort((a, b) => {return Math.random() > 0.5})
-        this.rareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Rare']).sort((a, b) => {return Math.random() > 0.5})
-        this.veryrareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Very Rare']).sort((a, b) => {return Math.random() > 0.5})
-        this.legendaryShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Item']), ['Legendary']).sort((a, b) => {return Math.random() > 0.5})
+        this.commonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Common']).sort((a, b) => {return Math.random() > 0.5})
+        this.uncommonShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Uncommon']).sort((a, b) => {return Math.random() > 0.5})
+        this.rareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Rare']).sort((a, b) => {return Math.random() > 0.5})
+        this.veryrareShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Very Rare']).sort((a, b) => {return Math.random() > 0.5})
+        this.legendaryShopItems = filterRarity(filterType(ITEMS, ['Ring', 'Rod', 'Scroll', 'Wondrous Items']), ['Legendary']).sort((a, b) => {return Math.random() > 0.5})
     }
 }
