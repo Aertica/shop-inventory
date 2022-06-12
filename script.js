@@ -80,7 +80,7 @@ const filterRarity = (list, filters) =>
 
 const addItem = (item, list) =>
 {
-    if(!item) return
+    if(list.length == 0) return
     let listItem = document.createElement('div')
     listItem.className = 'item'
     listItem.innerHTML = item.name
