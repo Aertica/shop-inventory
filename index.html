@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shopkeep Randomizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="shop-generator">
+        <div id="options">
+            <div id="shop-wealth">
+                <div>
+                    <input type="radio" name="shop-wealth" id="moderate" value="Moderate">
+                    <label for="moderate">Moderate</label>
+                </div>
+                <div>
+                    <input type="radio" name="shop-wealth" id="wealthy" value="Wealthy">
+                    <label for="wealthy">Wealthy</label>
+                </div>
+                <div>
+                    <input type="radio" name="shop-wealth" id="very-wealthy" value="Very Wealthy">
+                    <label for="very-wealthy">Very Wealthy</label>
+                </div>
+                <div>
+                    <input type="radio" name="shop-wealth" id="opulent" value="Opulent">
+                    <label for="opulent">Opulent</label>
+                </div>
+            </div>
+            <div id="shop-type">
+                <button onclick="new GeneralShop(getShopWealth()).generate()">General Shop</button>
+                <button onclick="new EquitementShop(getShopWealth()).generate()">Equitement Shop</button>
+                <button onclick="new PotionShop(getShopWealth()).generate()">Potion Shop</button>
+                <button onclick="new OditiesShop(getShopWealth()).generate()">Odities Shop</button>
+            </div>
+        </div>
+        <div id="shop-inventory">
+            <h1>Common Items</h1>
+            <div id="common-shop-items" class="item-list"></div>
+            <h1>Uncommon Items</h1>
+            <div id="uncommon-shop-items" class="item-list"></div>
+            <h1>Rare Items</h1>
+            <div id="rare-shop-items" class="item-list"></div>
+            <h1>Very Rare Items</h1>
+            <div id="veryrare-shop-items" class="item-list"></div>
+            <h1>Legendary Items</h1>
+            <div id="legendary-shop-items" class="item-list"></div>
+        </div>
+    </div>
+    <div id="items">
+        <div id="rarity-selection">
+            <button onclick="changeListVisibility('Common')">Common</button>
+            <button onclick="changeListVisibility('Uncommon')">Uncommon</button>
+            <Button onclick="changeListVisibility('Rare')">Rare</Button>
+            <button onclick="changeListVisibility('Very Rare')">Very Rare</button>
+            <button onclick="changeListVisibility('Legendary')">Legendary</button>
+        </div>
+        <div id="list-display">
+            <div id="Common" class="item-list"></div>
+            <div id="Uncommon" class="item-list" style="visibility: hidden;"></div>
+            <div id="Rare" class="item-list" style="visibility: hidden;"></div>
+            <div id="Very Rare" class="item-list" style="visibility: hidden;"></div>
+            <div id="Legendary" class="item-list" style="visibility: hidden;"></div>
+        </div>
+    </div>
+</body>
+</html>

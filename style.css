@@ -1,0 +1,110 @@
+#shop-generator
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 70vw;
+    height: fit-content;
+    max-height: 100vh;
+
+    overflow: hidden scroll;
+}
+
+#options
+{
+    position: sticky;
+    top: 0;
+
+    background-color: white;
+}
+
+#shop-wealth
+{
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#shop-wealth div
+{
+    margin: 1rem 0.5rem;
+}
+
+#shop-wealth label
+{
+    font: 1.5rem Serif;
+}
+
+#shop-type
+{
+    position: sticky;
+    top: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#shop-type button
+{
+    font: 1.5rem Serif;
+    margin: 0.5rem;
+}
+
+#items
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 30vw;
+    height: fit-content;
+    max-height: 100vh;
+
+    overflow: hidden scroll;
+}
+
+#rarity-selection
+{
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: white;
+}
+
+#rarity-selection button
+{
+    font: 1.5rem Serif;
+    margin: 0.5rem 0.5rem;
+}
+
+#list-display
+{
+    display: grid;
+}
+
+#list-display .item-list
+{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.item
+{
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    border: 1px solid black;
+    border-radius: 1rem;
+}
